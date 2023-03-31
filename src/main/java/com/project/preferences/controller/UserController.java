@@ -4,7 +4,6 @@ import com.project.preferences.api.UsersReportApi;
 import com.project.preferences.model.UserDto;
 import com.project.preferences.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

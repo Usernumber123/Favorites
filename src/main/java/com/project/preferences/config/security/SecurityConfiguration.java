@@ -45,7 +45,8 @@ public class SecurityConfiguration {
                 .anyRequest()
                 .authenticated().and()
                 .authenticationProvider(authenticationProvider())
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);;
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        ;
 
         http.addFilterBefore(authenticationJwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
@@ -60,16 +61,4 @@ public class SecurityConfiguration {
         return authenticationProvider;
     }
 
-
-
-
-
-
-
-  /*  @Bean
-    public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> web
-                .ignoring()
-                .antMatchers("/sign-up","/token");
-    }*/
 }
